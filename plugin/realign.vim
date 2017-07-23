@@ -1,4 +1,5 @@
-nnoremap <buffer> <Plug>(realign_toggle_electric_dot) :RealignToggleElectricDot<CR>
+nnoremap <Plug>(realign_toggle_electric_dot) :RealignToggleElectricDot<CR>
+inoremap <Plug>(realign_toggle_electric_dot) x<Esc>:undojoin <Bar> RealignToggleElectricDot<CR>s
 
 command RealignToggleElectricDot call RealignToggleElectricDot()
 
