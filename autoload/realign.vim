@@ -1,5 +1,5 @@
 func! realign#ruby_method_chain()
-  if s:has_leading_dot_operator()
+  if s:has_leading_dot()
     call s:align_method_chain_up()
   endif
   if line('.') < line('$')
@@ -7,8 +7,8 @@ func! realign#ruby_method_chain()
   endif
 endf
 
-func! s:has_leading_dot_operator()
-  return match(getline('.'), '^\s*\zs\.\K') != -1
+func! s:has_leading_dot()
+  return match(getline('.'), '^\s*\zs\.') != -1
 endf
 
 func! s:align_method_chain_up()
